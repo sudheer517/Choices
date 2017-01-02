@@ -1,0 +1,5 @@
+src/MyChoices.Portal/node_modules/*
+.vs/*
+src/MyChoices.Portal/bin/*
+src/MyChoices.Portal/obj/*
+src/MyChoices.Portal/stats.json
