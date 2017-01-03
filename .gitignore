@@ -3,3 +3,5 @@ src/MyChoices.Portal/node_modules/*
 src/MyChoices.Portal/bin/*
 src/MyChoices.Portal/obj/*
 src/MyChoices.Portal/stats.json
+src/MyChoices.Portal/AngularSpa/dist/*
+src/MyChoices.Portal/wwwroot/dist/*
