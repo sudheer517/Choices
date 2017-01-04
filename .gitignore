@@ -5,5 +5,7 @@ src/MyChoices.Portal/obj/*
 src/MyChoices.Portal/stats.json
 src/MyChoices.Portal/AngularSpa/dist/*
 src/MyChoices.Portal/wwwroot/dist/*
+src/MyChoices.Portal/AngularSpa/*.js
 src/MyChoices.Portal/AngularSpa/app/*.js
 src/MyChoices.Portal/AngularSpa/app/*.map
+src/MyChoices.Portal/AngularSpa/app/components/*.map
