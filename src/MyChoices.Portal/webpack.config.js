@@ -15,7 +15,7 @@ var sharedConfig = {
         loaders: [
             { test: /\.ts$/, include: /AngularSpa/, loader: 'ts', query: { silent: true } },
             { test: /\.html$/, loader: 'raw' },
-            { test: /\.scss$/, exclude: /node_modules/, loaders: ['raw-loader', 'sass-loader'] },
+            { test: /\.scss$/, exclude: /node_modules/, loaders: ['style-loader', 'css-loader', 'sass-loader'] },
             { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'url', query: { limit: 25000 } }
         ]
     }
