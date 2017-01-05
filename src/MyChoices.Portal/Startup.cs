@@ -4,10 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using MyChoices.Portal.Services;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 
 namespace MyChoices.Portal
@@ -20,6 +21,10 @@ namespace MyChoices.Portal
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+
+            if (env.IsDevelopment())
+            {
+            }
 
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
@@ -38,7 +43,6 @@ namespace MyChoices.Portal
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-
 
             if (env.IsDevelopment())
             {
