@@ -1,0 +1,6 @@
+{ 
+   "strictSSL": false,
+   "strict-ssl": false,
+   "insecure": true,
+   "rejectUnauthorized": false
+}
