@@ -10,3 +10,5 @@ src/MyChoices.Portal/AngularSpa/*.map
 src/MyChoices.Portal/AngularSpa/app/*.js
 src/MyChoices.Portal/AngularSpa/app/*.map
 src/MyChoices.Portal/AngularSpa/app/components/*.map
+src/MyChoices.Portal/AngularSpa/app/components/**/*.js
+src/MyChoices.Portal/AngularSpa/app/components/**/*.map
