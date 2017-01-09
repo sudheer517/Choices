@@ -11,11 +11,13 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.(png|woff|woff2|eot|ttf|svg)(\?|$)/, loader: 'url-loader?limit=100000' },
-            { test: /\.css(\?|$)/, loader: extractCSS.extract(['css']) }
+            { test: /\.css(\?|$)/, loader: extractCSS.extract(['css']) },
+            { test: /bootstrap\/dist\/js\/umd\//, use: 'imports-loader?jQuery=jquery' }
         ]
     },
     entry: {
         vendor: [
+            'jquery',
             '@angular/common',
             '@angular/compiler',
             '@angular/core',
@@ -26,12 +28,17 @@ module.exports = {
             '@angular/platform-server',
             'angular2-universal',
             'angular2-universal-polyfills',
+            'imports-loader',
+            'tether',
+            'tether/dist/css/tether.css',
             'bootstrap',
             'bootstrap/dist/css/bootstrap.css',
             'es6-shim',
             'es6-promise',
-            'jquery',
+            'jquery-slimscroll',
             'zone.js',
+            'lodash',
+            'string-replace-loader'
         ]
     },
     output: {
@@ -41,7 +48,13 @@ module.exports = {
     },
     plugins: [
         extractCSS,
-        new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }), 
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery",
+            Tether: "tether",
+            "window.Tether": "tether",
+        }),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.DllPlugin({
             path: path.join(__dirname, 'wwwroot', 'dist', '[name]-manifest.json'),
