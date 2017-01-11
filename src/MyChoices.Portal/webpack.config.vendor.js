@@ -38,11 +38,24 @@ module.exports = {
             'jquery-slimscroll',
             'zone.js',
             'lodash',
-            'string-replace-loader'
+            'string-replace-loader',
+            'fullcalendar',
+            'fullcalendar/dist/fullcalendar.css',
+            'amcharts3',
+            'ammap3',
+            'ammap3/ammap/ammap.css',
+            'normalize.css/normalize.css',
+            'chart.js',
+            'easy-pie-chart',
+            'google-maps',
+            'leaflet',
+            'leaflet/dist/leaflet.css',
+            'leaflet-map',
+            'ckeditor'
         ]
     },
     output: {
-        path: path.join(__dirname, 'wwwroot', 'dist'),
+        path: path.join(__dirname, 'wwwroot'),
         filename: '[name].js',
         library: '[name]_[hash]',
     },
@@ -57,7 +70,7 @@ module.exports = {
         }),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.DllPlugin({
-            path: path.join(__dirname, 'wwwroot', 'dist', '[name]-manifest.json'),
+            path: path.join(__dirname, 'wwwroot', '[name]-manifest.json'),
             name: '[name]_[hash]'
         })
     ].concat(isDevBuild ? [] : [

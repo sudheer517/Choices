@@ -4,6 +4,7 @@ var webpack = require('webpack');
 var nodeExternals = require('webpack-node-externals');
 var merge = require('webpack-merge');
 var allFilenamesExceptJavaScript = /\.(?!js(\?|$))([^.]+(\?|$))/;
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var sharedConfig = {
     resolve: { extensions: ['', '.js', '.ts'] },
@@ -15,7 +16,8 @@ var sharedConfig = {
         loaders: [
             { test: /\.ts$/, include: /AngularSpa/, loader: 'ts', query: { silent: true } },
             { test: /\.html$/, loader: 'raw' },
-            { test: /\.scss$/, exclude: /node_modules/, loaders: ["to-string", "css", "sass"] },
+            { test: /\.css$/, loader: 'to-string!css' },
+            { test: /\.scss$/, loaders: ['to-string-loader', 'css-loader', 'sass-loader'], },
             { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'url', query: { limit: 25000 } }
         ]
     }
@@ -23,9 +25,12 @@ var sharedConfig = {
 
 var clientBundleConfig = merge(sharedConfig, {
     entry: { 'main-client': './AngularSpa/boot-client.ts' },
-    output: { path: path.join(__dirname, './wwwroot/dist') },
+    output: { path: path.join(__dirname, './wwwroot/') },
     devtool: isDevBuild ? 'inline-source-map' : null,
     plugins: [
+        new CopyWebpackPlugin([
+        { from: './AngularSpa/assets', to: 'assets' }
+        ]),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery",
@@ -35,7 +40,7 @@ var clientBundleConfig = merge(sharedConfig, {
         }),
         new webpack.DllReferencePlugin({
             context: __dirname,
-            manifest: require('./wwwroot/dist/vendor-manifest.json')
+            manifest: require('./wwwroot/vendor-manifest.json')
         })
     ].concat(isDevBuild ? [] : [
         new webpack.optimize.OccurenceOrderPlugin(),

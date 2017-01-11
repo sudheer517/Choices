@@ -10,7 +10,7 @@
     "typeRoots": [
       "../node_modules/@types"
     ],
-    "types": [ "node", "lodash", "jquery", "jquery.slimscroll" ]
+    "types": [ "node", "lodash", "jquery", "jquery.slimscroll", "fullcalendar" ]
   },
   "compileOnSave": true,
   "exclude": [ "bin", "node_modules" ]
