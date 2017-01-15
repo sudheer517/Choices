@@ -16,3 +16,11 @@ src/MyChoices.Portal/AngularSpa/app/**/**/**/*.js
 src/MyChoices.Portal/AngularSpa/app/**/**/**/*.map
 src/MyChoices.Portal/wwwroot/assets/**/*
 src/MyChoices.Portal/wwwroot/*
+src/MyChoices.Portal/src/app/pages/**/**/*.map
+src/MyChoices.Portal/src/app/**/**/**/*.map
+src/MyChoices.Portal/src/*.js
+src/MyChoices.Portal/src/*.map
+src/MyChoices.Portal/src/app/pages/**/**/**/*.js
+src/MyChoices.Portal/src/app/pages/**/**/**/*.map
+src/MyChoices.Portal/src/app/*.js
+src/MyChoices.Portal/src/app/**/**/**/*.js

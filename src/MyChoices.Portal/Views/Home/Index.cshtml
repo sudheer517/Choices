@@ -7,14 +7,13 @@
 @*<app asp-prerender-module="AngularSpa/dist/main-server">Loading...</app>*@
 
 
-<app>Loading...</app>
-
+ <app>
+</app>
 <div id="preloader">
     <div></div>
 </div>
 
-@section scripts {
-    <script src="https://code.angularjs.org/tools/system.js"></script>
-    <script src="~/vendor.js" asp-append-version="true"></script>
-    <script src="~/main-client.js" asp-append-version="true"></script>
-}
+<link href="initial.css" rel="stylesheet">
+<script type="text/javascript" src="~/polyfills.bundle.js" defer></script>
+<script type="text/javascript" src="~/vendor.bundle.js" defer></script>
+<script type="text/javascript" src="~/main.bundle.js" defer></script>
