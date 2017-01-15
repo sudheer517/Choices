@@ -30,7 +30,7 @@ export const PAGES_MENU = [
                 path: 'charts',
                 data: {
                     menu: {
-                        title: 'Charts',
+                        title: 'Reports',
                         icon: 'ion-stats-bars',
                         selected: false,
                         expanded: false,
@@ -42,7 +42,7 @@ export const PAGES_MENU = [
                         path: 'chartist-js',
                         data: {
                             menu: {
-                                title: 'Chartist.Js',
+                                title: 'Annual',
                             }
                         }
                     }
@@ -52,7 +52,7 @@ export const PAGES_MENU = [
                 path: 'ui',
                 data: {
                     menu: {
-                        title: 'UI Features',
+                        title: 'Misc1',
                         icon: 'ion-android-laptop',
                         selected: false,
                         expanded: false,
@@ -64,7 +64,7 @@ export const PAGES_MENU = [
                         path: 'typography',
                         data: {
                             menu: {
-                                title: 'Typography',
+                                title: 'Misc1-1',
                             }
                         }
                     },
@@ -72,7 +72,7 @@ export const PAGES_MENU = [
                         path: 'buttons',
                         data: {
                             menu: {
-                                title: 'Buttons',
+                                title: 'Misc1-2',
                             }
                         }
                     },
@@ -80,7 +80,7 @@ export const PAGES_MENU = [
                         path: 'icons',
                         data: {
                             menu: {
-                                title: 'Icons',
+                                title: 'Misc1-3',
                             }
                         }
                     },
@@ -88,7 +88,7 @@ export const PAGES_MENU = [
                         path: 'modals',
                         data: {
                             menu: {
-                                title: 'Modals',
+                                title: 'Misc1-4',
                             }
                         }
                     },
@@ -96,7 +96,7 @@ export const PAGES_MENU = [
                         path: 'grid',
                         data: {
                             menu: {
-                                title: 'Grid',
+                                title: 'Misc1-5',
                             }
                         }
                     },
@@ -106,7 +106,7 @@ export const PAGES_MENU = [
                 path: 'forms',
                 data: {
                     menu: {
-                        title: 'Form Elements',
+                        title: 'Misc-2',
                         icon: 'ion-compose',
                         selected: false,
                         expanded: false,
@@ -118,7 +118,7 @@ export const PAGES_MENU = [
                         path: 'inputs',
                         data: {
                             menu: {
-                                title: 'Form Inputs',
+                                title: 'Misc-2-1',
                             }
                         }
                     },
@@ -126,7 +126,7 @@ export const PAGES_MENU = [
                         path: 'layouts',
                         data: {
                             menu: {
-                                title: 'Form Layouts',
+                                title: 'Misc-2-2',
                             }
                         }
                     }
@@ -136,7 +136,7 @@ export const PAGES_MENU = [
                 path: 'tables',
                 data: {
                     menu: {
-                        title: 'Tables',
+                        title: 'Misc-3',
                         icon: 'ion-grid',
                         selected: false,
                         expanded: false,
@@ -148,7 +148,7 @@ export const PAGES_MENU = [
                         path: 'basictables',
                         data: {
                             menu: {
-                                title: 'Basic Tables',
+                                title: 'Misc-3-1',
                             }
                         }
                     },
@@ -156,7 +156,7 @@ export const PAGES_MENU = [
                         path: 'smarttables',
                         data: {
                             menu: {
-                                title: 'Smart Tables',
+                                title: 'Misc-3-2',
                             }
                         }
                     }
@@ -166,7 +166,7 @@ export const PAGES_MENU = [
                 path: 'maps',
                 data: {
                     menu: {
-                        title: 'Maps',
+                        title: 'Misc4',
                         icon: 'ion-ios-location-outline',
                         selected: false,
                         expanded: false,
@@ -178,7 +178,7 @@ export const PAGES_MENU = [
                         path: 'googlemaps',
                         data: {
                             menu: {
-                                title: 'Google Maps',
+                                title: 'Misc4-1',
                             }
                         }
                     },
@@ -186,7 +186,7 @@ export const PAGES_MENU = [
                         path: 'leafletmaps',
                         data: {
                             menu: {
-                                title: 'Leaflet Maps',
+                                title: 'Misc4-2',
                             }
                         }
                     },
@@ -194,7 +194,7 @@ export const PAGES_MENU = [
                         path: 'bubblemaps',
                         data: {
                             menu: {
-                                title: 'Bubble Maps',
+                                title: 'Misc4-3',
                             }
                         }
                     },
@@ -202,7 +202,7 @@ export const PAGES_MENU = [
                         path: 'linemaps',
                         data: {
                             menu: {
-                                title: 'Line Maps',
+                                title: 'Misc4-4',
                             }
                         }
                     }
@@ -212,7 +212,7 @@ export const PAGES_MENU = [
                 path: '',
                 data: {
                     menu: {
-                        title: 'Pages',
+                        title: 'Misc5',
                         icon: 'ion-document',
                         selected: false,
                         expanded: false,
@@ -224,7 +224,7 @@ export const PAGES_MENU = [
                         path: ['/login'],
                         data: {
                             menu: {
-                                title: 'Login'
+                                title: 'Misc5-1'
                             }
                         }
                     },
@@ -232,7 +232,7 @@ export const PAGES_MENU = [
                         path: ['/register'],
                         data: {
                             menu: {
-                                title: 'Register'
+                                title: 'Misc5-2'
                             }
                         }
                     }
@@ -242,7 +242,7 @@ export const PAGES_MENU = [
                 path: '',
                 data: {
                     menu: {
-                        title: 'Menu Level 1',
+                        title: 'Misc6',
                         icon: 'ion-ios-more',
                         selected: false,
                         expanded: false,
@@ -254,7 +254,7 @@ export const PAGES_MENU = [
                         path: '',
                         data: {
                             menu: {
-                                title: 'Menu Level 1.1',
+                                title: 'Misc6-1',
                                 url: '#'
                             }
                         }
@@ -263,7 +263,7 @@ export const PAGES_MENU = [
                         path: '',
                         data: {
                             menu: {
-                                title: 'Menu Level 1.2',
+                                title: 'Misc6-2',
                                 url: '#'
                             }
                         },
@@ -272,7 +272,7 @@ export const PAGES_MENU = [
                                 path: '',
                                 data: {
                                     menu: {
-                                        title: 'Menu Level 1.2.1',
+                                        title: 'Misc6-3',
                                         url: '#'
                                     }
                                 }
@@ -285,8 +285,8 @@ export const PAGES_MENU = [
                 path: '',
                 data: {
                     menu: {
-                        title: 'External Link',
-                        url: 'http://akveo.com',
+                        title: 'Misc single link',
+                        url: 'http://google.com',
                         icon: 'ion-android-exit',
                         order: 800,
                         target: '_blank'
