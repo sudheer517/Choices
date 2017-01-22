@@ -30,3 +30,5 @@ MyChoices.Portal/wwwroot/*
 MyChoices.Portal/node_modules/*
 MyChoices.Portal/bin/*
 MyChoices.Portal/obj/*
+MyChoices.Portal/src/*.js
+MyChoices.Portal/src/*.map
