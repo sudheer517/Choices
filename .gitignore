@@ -24,3 +24,9 @@ src/MyChoices.Portal/src/app/pages/**/**/**/*.js
 src/MyChoices.Portal/src/app/pages/**/**/**/*.map
 src/MyChoices.Portal/src/app/*.js
 src/MyChoices.Portal/src/app/**/**/**/*.js
+MyChoices.Portal/src/app/**/**/*.map
+MyChoices.Portal/src/app/**/**/*.js
+MyChoices.Portal/wwwroot/*
+MyChoices.Portal/node_modules/*
+MyChoices.Portal/bin/*
+MyChoices.Portal/obj/*
