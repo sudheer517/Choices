@@ -9,7 +9,14 @@
   <ItemGroup>
     <Content Remove="node_modules\**" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Remove="src\*.js" />
+    <Content Remove="src\*.map" />
+    <Content Remove="src\app\*.js" />
+    <Content Remove="src\app\*.map" />
+    <Content Remove="src\app\**\*.js" />
+    <Content Remove="src\app\**\*.map" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.App">
       <Version>1.0.1</Version>
@@ -65,7 +72,6 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
   </PropertyGroup>
-  <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish" Condition=" '$(IsCrossTargetingBuild)' != 'true' ">
-  </Target>
+  <Target Name="PrepublishScript" BeforeTargets="PrepareForPublish" Condition=" '$(IsCrossTargetingBuild)' != 'true' " />
   <Target Name="PostpublishScript" AfterTargets="Publish" Condition=" '$(IsCrossTargetingBuild)' != 'true' " />
 </Project>
