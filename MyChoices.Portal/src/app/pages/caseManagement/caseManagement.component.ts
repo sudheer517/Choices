@@ -1,46 +1,48 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-
-
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { QuestionService }    from './components/question.service';
+import { Question, IOptions } from './components/question';
+import { DropdownQuestion } from './components/question-dropdown';
+import { TextboxQuestion } from './components/question-textbox';
 @Component({
   selector: 'case-management',
   encapsulation: ViewEncapsulation.None,
   styles: [require('./caseManagement.scss')],
   template: require('./caseManagement.html')
 })
-export class CaseManagement {
-    public checkboxModel = [{
-        name: 'Husband',
-        checked: true,
-        class: 'col-md-2'
-    }, {
-        name: 'Children',
-        checked: true,
-        class: 'col-md-2'
-    }, {
-        name: 'Mother in law',
-        checked: false,
-        class: 'col-md-2'
-    }, {
-        name: 'Father in law',
-        checked: false,
-        class: 'col-md-2'
-    }, {
-        name: 'Brother in law',
-        checked: false,
-        class: 'col-md-2'
-    }, {
-        name: 'Sister in law',
-        checked: false,
-        class: 'col-md-2'
-    }];
 
-    public checkboxPropertiesMapping = {
-        model: 'checked',
-        value: 'name',
-        label: 'name',
-        baCheckboxClass: 'class'
-    };
-  constructor() {
-  }
+export class CaseManagement implements OnInit{
+    questions: any[] = [];
+    constructor(private questionService: QuestionService) {
+        
+    }
 
+    ngOnInit(){
+        this.questionService.getQuestions().subscribe(responseQuestions => {
+            responseQuestions.sort((a,b) => a.order - b.order);
+            let tempQuestion = null;
+            responseQuestions.forEach(q => {
+                if(q.questionType === "dropdown"){
+                   tempQuestion = new DropdownQuestion({
+                        key: q.key,
+                        label: q.label,
+                        options: q.options,
+                        order: q.order
+                    });
+                }
+                if(q.questionType === "textbox"){
+                     tempQuestion = new TextboxQuestion({
+                        key: q.key,
+                        label: q.label,
+                        value: q.value,
+                        required: q.required,
+                        order: q.order
+                    });
+                }
+                this.questions.push(tempQuestion);
+            });
+        },
+        error => console.log(error),
+        () => console.log(this.questions));
+    }
 }
+

@@ -55,7 +55,7 @@ namespace MyChoices.Portal
             app.UseStaticFiles();
 
             // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
-
+            app.UseCors(builder => builder.AllowAnyOrigin());
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
