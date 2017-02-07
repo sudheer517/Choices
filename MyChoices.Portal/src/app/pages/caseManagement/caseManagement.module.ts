@@ -9,8 +9,8 @@ import { DynamicFormQuestionComponent } from './components/dynamic-form-question
 import { DynamicFormComponent } from './components/dynamic-form.component';
 
 import { routing } from './caseManagement.routing';
-import { QuestionControlService  } from './components/question-control.service';
 import { QuestionService  } from './components/question.service';
+import { QuestionControlService  } from './components/question-control.service';
 
 @NgModule({
   imports: [
@@ -22,12 +22,12 @@ import { QuestionService  } from './components/question.service';
   ],
   declarations: [
       CaseManagement,
-      DynamicFormQuestionComponent,
-      DynamicFormComponent
+      DynamicFormComponent,
+      DynamicFormQuestionComponent
   ],
   providers: [
-    QuestionControlService,
-    QuestionService
+    QuestionService,
+    QuestionControlService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
