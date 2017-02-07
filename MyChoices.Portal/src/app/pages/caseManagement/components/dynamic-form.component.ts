@@ -7,7 +7,7 @@ import { QuestionControlService }    from './question-control.service';
   templateUrl: './dynamic-form.component.html',
   providers: [ QuestionControlService ]
 })
-export class DynamicFormComponent implements OnInit, OnChanges {
+export class DynamicFormComponent implements OnInit {
   @Input() questions: QuestionBase<any>[];
   form: FormGroup;
   payLoad = '';
@@ -15,13 +15,9 @@ export class DynamicFormComponent implements OnInit, OnChanges {
     
   }
   ngOnInit() {
-    console.log("question are == " + this.questions);
     this.form = this.qcs.toFormGroup(this.questions);
   }
 
-  ngOnChanges(changes:any){
-    console.log("children questions = " + this.questions);
-  }
   onSubmit() {
     this.payLoad = JSON.stringify(this.form.value);
   }

@@ -19,28 +19,28 @@ export class CaseManagement implements OnInit{
     ngOnInit(){
         this.questionService.getQuestions().subscribe(responseQuestions => {
             responseQuestions.sort((a,b) => a.order - b.order);
-            let tempQuestions = [];
+            let tempQuestion = null;
             responseQuestions.forEach(q => {
                 if(q.questionType === "dropdown"){
-                   tempQuestions.push(new DropdownQuestion({
+                   tempQuestion = new DropdownQuestion({
                         key: q.key,
                         label: q.label,
                         options: q.options,
                         order: q.order
-                   }));
+                    });
                 }
                 if(q.questionType === "textbox"){
-                     tempQuestions.push(new TextboxQuestion({
+                     tempQuestion = new TextboxQuestion({
                         key: q.key,
                         label: q.label,
                         value: q.value,
                         required: q.required,
                         order: q.order
-                     }));
+                    });
                 }
+                this.questions.push(tempQuestion);
             });
-
-            this.questions = tempQuestions;
+            
         },
         error => console.log(error),
         () => console.log(this.questions));
