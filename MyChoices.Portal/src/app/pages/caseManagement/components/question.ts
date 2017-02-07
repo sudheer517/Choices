@@ -10,4 +10,5 @@ export class Question{
     type: string;
     questionType: string;
     options: IOptions;
+    lineNumber: number;
 }
