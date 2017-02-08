@@ -24,7 +24,18 @@ export const PAGES_MENU = [
                         expanded: false,
                         order: 0
                     }
-                }
+                },
+                children: [
+                    {
+                        path: 'newCase',
+                        data: {
+                            menu: {
+                                title: 'New Case',
+                                icon: 'ion-clipboard'
+                            }
+                        }
+                    }
+                ]
             },
             {
                 path: 'charts',

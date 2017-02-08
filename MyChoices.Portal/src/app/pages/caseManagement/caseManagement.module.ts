@@ -5,6 +5,7 @@ import { ReactiveFormsModule  } from '@angular/forms';
 import { NgaModule } from '../../theme/nga.module';
 
 import { CaseManagement } from './caseManagement.component';
+import { NewCase } from './newCase/newCase.component';
 import { DynamicFormQuestionComponent } from './components/dynamic-form-question.component';
 import { DynamicFormComponent } from './components/dynamic-form.component';
 
@@ -22,6 +23,7 @@ import { QuestionControlService  } from './components/question-control.service';
   ],
   declarations: [
       CaseManagement,
+      NewCase,
       DynamicFormComponent,
       DynamicFormQuestionComponent
   ],
